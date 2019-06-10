@@ -22,12 +22,12 @@ namespace SearchEngine
         {          
             try
             {
-                
                 PerformSearch(args[0], args[1]);
             }
             catch (Exception ex)
             {
                 LogError.AddLogError(ex.Message, ex.StackTrace);
+                Console.Read();
             }
         }
 
