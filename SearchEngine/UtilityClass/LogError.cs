@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SearchEngine.UtilityClass
 {
@@ -13,16 +9,23 @@ namespace SearchEngine.UtilityClass
         {
             try
             {
-                string filePath = @"C:\SearchEngineLogError.txt";
+
+                string filePath = ResourceFile.FileLogName;
 
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
-                    writer.WriteLine("Message :" + errorMessage + "<br/>" + 
-                        Environment.NewLine + "StackTrace :" + errorStackTrace + "" + 
-                        Environment.NewLine + "Date :" + DateTime.Now.ToString());
+                    var logTextDetail = "Message :" + errorMessage + "<br/>" +
+                        Environment.NewLine + "StackTrace :" + errorStackTrace + "" +
+                        Environment.NewLine + "Date :" + DateTime.Now.ToString();
 
-                    writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + 
-                        Environment.NewLine);
+                    var footer = Environment.NewLine + "-----------------------------------------------------------------------------" +
+                        Environment.NewLine;
+
+                    writer.WriteLine(logTextDetail);
+                    writer.WriteLine(footer);
+
+                    Console.WriteLine(logTextDetail);
+                    Console.WriteLine(footer);
                 }
             }
             catch (Exception)

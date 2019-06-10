@@ -129,6 +129,9 @@
   <data name="BingUrl" xml:space="preserve">
     <value>https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?</value>
   </data>
+  <data name="FileLogName" xml:space="preserve">
+    <value>SearchEngineLogError.txt</value>
+  </data>
   <data name="GoogleApiKey" xml:space="preserve">
     <value>AIzaSyBr5jnOdpRhx_OZ6DLyqq6LqdI8qp0g67Y</value>
   </data>

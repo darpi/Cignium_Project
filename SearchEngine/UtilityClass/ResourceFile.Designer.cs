@@ -97,6 +97,15 @@ namespace SearchEngine.UtilityClass {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a SearchEngineLogError.txt.
+        /// </summary>
+        internal static string FileLogName {
+            get {
+                return ResourceManager.GetString("FileLogName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a AIzaSyBr5jnOdpRhx_OZ6DLyqq6LqdI8qp0g67Y.
         /// </summary>
         internal static string GoogleApiKey {
